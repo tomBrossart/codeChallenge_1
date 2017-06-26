@@ -1,11 +1,35 @@
 console.log('js sourced');
 
+var buttonCounter = 0;
+
 $(document).ready(function() {
-  $('#generate').on('click', function() {
-    $('body').append('<div class="container"></div>');
-  });
+  addClickHandlers();
+  appendDOM();
+
+
+
+
 
 });
+
+function addClickHandlers() {
+  $('body').on('click', '#generate', function() {
+    buttonCounter += 1;
+    $('body').append('<div class="container"></div>');
+    $('div:first-of-type').html('<p></p>');
+    $('div p').text(buttonCounter);
+
+    console.log(buttonCounter);
+    });
+}
+
+function appendDOM() {
+
+}
+
+
+
+
 
 
 // Buttons for later
