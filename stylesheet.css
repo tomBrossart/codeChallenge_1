@@ -2,10 +2,14 @@
   position: absolute;
 }
 
-.generated {
-  background-color: red;
+div {
+  background-color: yellow;
   height: 100px;
   width: 100px;
   margin: 20px;
   float: left;
+}
+
+.red {
+  background-color: red;
 }
