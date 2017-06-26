@@ -15,9 +15,12 @@ $(document).ready(function() {
 function addClickHandlers() {
   $('body').on('click', '#generate', function() {
     buttonCounter += 1;
-    $('body').append('<div class="container"></div>');
+    $('body').append('<div class="generated"></div>');
     $('div:first-of-type').html('<p></p>');
     $('div p').text(buttonCounter);
+    $('div:first-of-type').html('<button type="button" id="swap">Swap</button>' +
+                            '<button type="button" id="delete">Delete</button>');
+
 
     console.log(buttonCounter);
     });
